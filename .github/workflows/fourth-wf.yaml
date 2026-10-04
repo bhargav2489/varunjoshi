@@ -1,10 +1,21 @@
 name: my fourth workflow
 on: push
 jobs:
-  runner-info-job:
+  runner-info-job_ubuntu:
     runs-on: ubuntu-latest
     steps:
       - name: Print Runner Details
+        run: |
+          echo "Workflow is executing on a github-hosted runner."
+          echo "Runner name: $RUNNER_NAME"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runer Architecture: $RUNNER_ARCH"
+
+  runner-info-job_windows:
+    runs-on: windows-latest
+    steps:
+      - name: Print Runner Details
+        shell: bash
         run: |
           echo "Workflow is executing on a github-hosted runner."
           echo "Runner name: $RUNNER_NAME"
