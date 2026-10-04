@@ -1,4 +1,4 @@
-name: my first workflow
+name: my fourth workflow
 on: push
 jobs:
   runner-info-job:
@@ -9,4 +9,4 @@ jobs:
           echo "Workflow is executing on a github-hosted runner."
           echo "Runner name: $RUNNER_NAME"
           echo "Runner OS: $RUNNER_OS"
-          echo "Runer Architecture: $RUNNER_Arch"
+          echo "Runer Architecture: $RUNNER_ARCH"
