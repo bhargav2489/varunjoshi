@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Build Docker Image
+        working-directory: project-files
         run: docker build -t varunjoshi:v1.0.0 .
 
       - name: Run Container
