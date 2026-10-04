@@ -1,5 +1,5 @@
 name: my fourth workflow
-on: push
+on: workflow_dispatch
 jobs:
   runner-info-job_ubuntu:
     runs-on: ubuntu-latest
