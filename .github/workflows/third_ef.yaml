@@ -1,0 +1,14 @@
+name: my third workflow
+on: 
+  workflow_dispatch:
+  push:
+  pull_request:
+  schedule:
+    - corn" "*/7 * * * *"
+
+jobs:
+    event-info-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Trigger event
+              run: echo "My Trigger event is ${{ github.event_name }} event"
