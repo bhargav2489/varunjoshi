@@ -4,7 +4,7 @@ on:
   push:
   pull_request:
   schedule:
-    - corn" "*/7 * * * *"
+    - cron: "*/7 * * * *"
 
 jobs:
     event-info-job:
