@@ -21,12 +21,12 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v7
         with:
-          context: .
+          context: project-files
           push: true
-          tags: bhargav2489/cloudwithvarjosh-flask-ap:v1.0.1
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/cloudwithvarjosh-flask-ap:v1.0.1
 
       - name: Run Container
-        run: docker run -d -p 5000:5000 --name cwvj-flask-container bhargav2489/cloudwithvarjosh-flask-ap:v1.0.1
+        run: docker run -d -p 5000:5000 --name cwvj-flask-container ${{ secrets.DOCKERHUB_USERNAME }}/cloudwithvarjosh-flask-ap:v1.0.1
 
       - name: Smoke Test
         run: |
