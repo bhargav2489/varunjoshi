@@ -1,8 +1,11 @@
 #Demo 2: Building, pusing and Running a Flask Application using GitHub Actions
 name: 02 - CWVJ Flask CI Pipeline
 
-on:
-  push:
+# on:
+#   push:
+
+on: workflow_dispatch
+
 
 jobs:
   flask-ci-job:
