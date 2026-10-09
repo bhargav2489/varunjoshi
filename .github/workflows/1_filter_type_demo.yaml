@@ -2,7 +2,7 @@ name: 01 - Production Workflow Trigger Demo
 
 on:
   push:
-    branches_ignore:
+    branches-ignore:
       - "main"
       - "feature/*"
 
